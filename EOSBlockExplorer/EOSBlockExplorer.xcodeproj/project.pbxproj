@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77AC94CD21358FA7002BECCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94CC21358FA7002BECCF /* AppDelegate.swift */; };
+		77AC94CF21358FA7002BECCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94CE21358FA7002BECCF /* ViewController.swift */; };
+		77AC94D221358FA7002BECCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77AC94D021358FA7002BECCF /* Main.storyboard */; };
+		77AC94D521358FA7002BECCF /* EOSBlockExplorer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94D321358FA7002BECCF /* EOSBlockExplorer.xcdatamodeld */; };
+		77AC94D721358FA9002BECCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77AC94D621358FA9002BECCF /* Assets.xcassets */; };
+		77AC94DA21358FA9002BECCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77AC94D821358FA9002BECCF /* LaunchScreen.storyboard */; };
+		77AC94E521358FA9002BECCF /* EOSBlockExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94E421358FA9002BECCF /* EOSBlockExplorerTests.swift */; };
+		77AC94F021358FA9002BECCF /* EOSBlockExplorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94EF21358FA9002BECCF /* EOSBlockExplorerUITests.swift */; };
+		77AC94FE21359020002BECCF /* BlockExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94FD21359020002BECCF /* BlockExplorerViewController.swift */; };
+		77AC9500213592D8002BECCF /* BlockchainClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94FF213592D8002BECCF /* BlockchainClasses.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		77AC94E121358FA9002BECCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77AC94C121358FA7002BECCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77AC94C821358FA7002BECCF;
+			remoteInfo = EOSBlockExplorer;
+		};
+		77AC94EC21358FA9002BECCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77AC94C121358FA7002BECCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77AC94C821358FA7002BECCF;
+			remoteInfo = EOSBlockExplorer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		77AC94C921358FA7002BECCF /* EOSBlockExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EOSBlockExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77AC94CC21358FA7002BECCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		77AC94CE21358FA7002BECCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		77AC94D121358FA7002BECCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		77AC94D421358FA7002BECCF /* EOSBlockExplorer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EOSBlockExplorer.xcdatamodel; sourceTree = "<group>"; };
+		77AC94D621358FA9002BECCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		77AC94D921358FA9002BECCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		77AC94DB21358FA9002BECCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77AC94E021358FA9002BECCF /* EOSBlockExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EOSBlockExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77AC94E421358FA9002BECCF /* EOSBlockExplorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSBlockExplorerTests.swift; sourceTree = "<group>"; };
+		77AC94E621358FA9002BECCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77AC94EB21358FA9002BECCF /* EOSBlockExplorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EOSBlockExplorerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77AC94EF21358FA9002BECCF /* EOSBlockExplorerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSBlockExplorerUITests.swift; sourceTree = "<group>"; };
+		77AC94F121358FA9002BECCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77AC94FD21359020002BECCF /* BlockExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BlockExplorerViewController.swift; path = ViewControllers/BlockExplorerViewController.swift; sourceTree = "<group>"; };
+		77AC94FF213592D8002BECCF /* BlockchainClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainClasses.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77AC94C621358FA7002BECCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77AC94DD21358FA9002BECCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77AC94E821358FA9002BECCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		77AC94C021358FA7002BECCF = {
+			isa = PBXGroup;
+			children = (
+				77AC94CB21358FA7002BECCF /* EOSBlockExplorer */,
+				77AC94E321358FA9002BECCF /* EOSBlockExplorerTests */,
+				77AC94EE21358FA9002BECCF /* EOSBlockExplorerUITests */,
+				77AC94CA21358FA7002BECCF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		77AC94CA21358FA7002BECCF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77AC94C921358FA7002BECCF /* EOSBlockExplorer.app */,
+				77AC94E021358FA9002BECCF /* EOSBlockExplorerTests.xctest */,
+				77AC94EB21358FA9002BECCF /* EOSBlockExplorerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77AC94CB21358FA7002BECCF /* EOSBlockExplorer */ = {
+			isa = PBXGroup;
+			children = (
+				77AC94CC21358FA7002BECCF /* AppDelegate.swift */,
+				77AC94CE21358FA7002BECCF /* ViewController.swift */,
+				77AC94D021358FA7002BECCF /* Main.storyboard */,
+				77AC94FD21359020002BECCF /* BlockExplorerViewController.swift */,
+				77AC94FF213592D8002BECCF /* BlockchainClasses.swift */,
+				77AC94D621358FA9002BECCF /* Assets.xcassets */,
+				77AC94D821358FA9002BECCF /* LaunchScreen.storyboard */,
+				77AC94DB21358FA9002BECCF /* Info.plist */,
+				77AC94D321358FA7002BECCF /* EOSBlockExplorer.xcdatamodeld */,
+			);
+			path = EOSBlockExplorer;
+			sourceTree = "<group>";
+		};
+		77AC94E321358FA9002BECCF /* EOSBlockExplorerTests */ = {
+			isa = PBXGroup;
+			children = (
+				77AC94E421358FA9002BECCF /* EOSBlockExplorerTests.swift */,
+				77AC94E621358FA9002BECCF /* Info.plist */,
+			);
+			path = EOSBlockExplorerTests;
+			sourceTree = "<group>";
+		};
+		77AC94EE21358FA9002BECCF /* EOSBlockExplorerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				77AC94EF21358FA9002BECCF /* EOSBlockExplorerUITests.swift */,
+				77AC94F121358FA9002BECCF /* Info.plist */,
+			);
+			path = EOSBlockExplorerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		77AC94C821358FA7002BECCF /* EOSBlockExplorer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77AC94F421358FA9002BECCF /* Build configuration list for PBXNativeTarget "EOSBlockExplorer" */;
+			buildPhases = (
+				77AC94C521358FA7002BECCF /* Sources */,
+				77AC94C621358FA7002BECCF /* Frameworks */,
+				77AC94C721358FA7002BECCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EOSBlockExplorer;
+			productName = EOSBlockExplorer;
+			productReference = 77AC94C921358FA7002BECCF /* EOSBlockExplorer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		77AC94DF21358FA9002BECCF /* EOSBlockExplorerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77AC94F721358FA9002BECCF /* Build configuration list for PBXNativeTarget "EOSBlockExplorerTests" */;
+			buildPhases = (
+				77AC94DC21358FA9002BECCF /* Sources */,
+				77AC94DD21358FA9002BECCF /* Frameworks */,
+				77AC94DE21358FA9002BECCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77AC94E221358FA9002BECCF /* PBXTargetDependency */,
+			);
+			name = EOSBlockExplorerTests;
+			productName = EOSBlockExplorerTests;
+			productReference = 77AC94E021358FA9002BECCF /* EOSBlockExplorerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		77AC94EA21358FA9002BECCF /* EOSBlockExplorerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77AC94FA21358FA9002BECCF /* Build configuration list for PBXNativeTarget "EOSBlockExplorerUITests" */;
+			buildPhases = (
+				77AC94E721358FA9002BECCF /* Sources */,
+				77AC94E821358FA9002BECCF /* Frameworks */,
+				77AC94E921358FA9002BECCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77AC94ED21358FA9002BECCF /* PBXTargetDependency */,
+			);
+			name = EOSBlockExplorerUITests;
+			productName = EOSBlockExplorerUITests;
+			productReference = 77AC94EB21358FA9002BECCF /* EOSBlockExplorerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77AC94C121358FA7002BECCF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = izotx;
+				TargetAttributes = {
+					77AC94C821358FA7002BECCF = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					77AC94DF21358FA9002BECCF = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 77AC94C821358FA7002BECCF;
+					};
+					77AC94EA21358FA9002BECCF = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 77AC94C821358FA7002BECCF;
+					};
+				};
+			};
+			buildConfigurationList = 77AC94C421358FA7002BECCF /* Build configuration list for PBXProject "EOSBlockExplorer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 77AC94C021358FA7002BECCF;
+			productRefGroup = 77AC94CA21358FA7002BECCF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77AC94C821358FA7002BECCF /* EOSBlockExplorer */,
+				77AC94DF21358FA9002BECCF /* EOSBlockExplorerTests */,
+				77AC94EA21358FA9002BECCF /* EOSBlockExplorerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77AC94C721358FA7002BECCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77AC94DA21358FA9002BECCF /* LaunchScreen.storyboard in Resources */,
+				77AC94D721358FA9002BECCF /* Assets.xcassets in Resources */,
+				77AC94D221358FA7002BECCF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77AC94DE21358FA9002BECCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77AC94E921358FA9002BECCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77AC94C521358FA7002BECCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77AC9500213592D8002BECCF /* BlockchainClasses.swift in Sources */,
+				77AC94CF21358FA7002BECCF /* ViewController.swift in Sources */,
+				77AC94FE21359020002BECCF /* BlockExplorerViewController.swift in Sources */,
+				77AC94D521358FA7002BECCF /* EOSBlockExplorer.xcdatamodeld in Sources */,
+				77AC94CD21358FA7002BECCF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77AC94DC21358FA9002BECCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77AC94E521358FA9002BECCF /* EOSBlockExplorerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77AC94E721358FA9002BECCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77AC94F021358FA9002BECCF /* EOSBlockExplorerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		77AC94E221358FA9002BECCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77AC94C821358FA7002BECCF /* EOSBlockExplorer */;
+			targetProxy = 77AC94E121358FA9002BECCF /* PBXContainerItemProxy */;
+		};
+		77AC94ED21358FA9002BECCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77AC94C821358FA7002BECCF /* EOSBlockExplorer */;
+			targetProxy = 77AC94EC21358FA9002BECCF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		77AC94D021358FA7002BECCF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77AC94D121358FA7002BECCF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		77AC94D821358FA9002BECCF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77AC94D921358FA9002BECCF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		77AC94F221358FA9002BECCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		77AC94F321358FA9002BECCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		77AC94F521358FA9002BECCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75DNXHX5MQ;
+				INFOPLIST_FILE = EOSBlockExplorer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.izotx.EOSBlockExplorer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		77AC94F621358FA9002BECCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75DNXHX5MQ;
+				INFOPLIST_FILE = EOSBlockExplorer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.izotx.EOSBlockExplorer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		77AC94F821358FA9002BECCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75DNXHX5MQ;
+				INFOPLIST_FILE = EOSBlockExplorerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.izotx.EOSBlockExplorerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EOSBlockExplorer.app/EOSBlockExplorer";
+			};
+			name = Debug;
+		};
+		77AC94F921358FA9002BECCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75DNXHX5MQ;
+				INFOPLIST_FILE = EOSBlockExplorerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.izotx.EOSBlockExplorerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EOSBlockExplorer.app/EOSBlockExplorer";
+			};
+			name = Release;
+		};
+		77AC94FB21358FA9002BECCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75DNXHX5MQ;
+				INFOPLIST_FILE = EOSBlockExplorerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.izotx.EOSBlockExplorerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EOSBlockExplorer;
+			};
+			name = Debug;
+		};
+		77AC94FC21358FA9002BECCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75DNXHX5MQ;
+				INFOPLIST_FILE = EOSBlockExplorerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.izotx.EOSBlockExplorerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EOSBlockExplorer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77AC94C421358FA7002BECCF /* Build configuration list for PBXProject "EOSBlockExplorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77AC94F221358FA9002BECCF /* Debug */,
+				77AC94F321358FA9002BECCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77AC94F421358FA9002BECCF /* Build configuration list for PBXNativeTarget "EOSBlockExplorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77AC94F521358FA9002BECCF /* Debug */,
+				77AC94F621358FA9002BECCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77AC94F721358FA9002BECCF /* Build configuration list for PBXNativeTarget "EOSBlockExplorerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77AC94F821358FA9002BECCF /* Debug */,
+				77AC94F921358FA9002BECCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77AC94FA21358FA9002BECCF /* Build configuration list for PBXNativeTarget "EOSBlockExplorerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77AC94FB21358FA9002BECCF /* Debug */,
+				77AC94FC21358FA9002BECCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		77AC94D321358FA7002BECCF /* EOSBlockExplorer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				77AC94D421358FA7002BECCF /* EOSBlockExplorer.xcdatamodel */,
+			);
+			currentVersion = 77AC94D421358FA7002BECCF /* EOSBlockExplorer.xcdatamodel */;
+			path = EOSBlockExplorer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 77AC94C121358FA7002BECCF /* Project object */;
+}
