@@ -24,7 +24,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PsI-rC-xiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1396" y="265"/>
+            <point key="canvasLocation" x="-2001" y="255"/>
         </scene>
         <!--Block Explorer View Controller-->
         <scene sceneID="JGn-9g-CBM">
@@ -41,10 +41,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="fPk-4f-IcG" firstAttribute="top" secondItem="0WF-o5-Bln" secondAttribute="top" id="3lw-Dp-2eY"/>
                             <constraint firstItem="fPk-4f-IcG" firstAttribute="width" secondItem="0WF-o5-Bln" secondAttribute="width" id="8F7-fE-o5J"/>
-                            <constraint firstItem="fPk-4f-IcG" firstAttribute="top" secondItem="0WF-o5-Bln" secondAttribute="bottom" constant="-603" id="O0E-gh-aLv"/>
+                            <constraint firstItem="fPk-4f-IcG" firstAttribute="leading" secondItem="0WF-o5-Bln" secondAttribute="leading" id="QYd-Fc-1ci"/>
                             <constraint firstItem="fPk-4f-IcG" firstAttribute="height" secondItem="0WF-o5-Bln" secondAttribute="height" id="fxG-ok-bqT"/>
-                            <constraint firstItem="fPk-4f-IcG" firstAttribute="leading" secondItem="0WF-o5-Bln" secondAttribute="trailing" constant="-375" id="yTo-7S-DYY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0WF-o5-Bln"/>
                     </view>
@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YWE-nI-Pjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2249" y="372"/>
+            <point key="canvasLocation" x="-1199" y="254"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -70,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="303" y="265"/>
+            <point key="canvasLocation" x="-460" y="254"/>
         </scene>
     </scenes>
 </document>
