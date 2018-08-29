@@ -43,6 +43,7 @@ struct ChainInfo:Decodable{
     enum CodingKeys : String, CodingKey {
         case lastBlock = "last_irreversible_block_num"
     }
+
 }
 
 struct Block:Decodable{
@@ -51,12 +52,13 @@ struct Block:Decodable{
     let producer:String
     let producer_signature:String
     let transactions:[Transaction]
+    var content_string:String?
 }
 
 struct Transaction:Decodable{
     let status:String
+    var content_string:String?
 }
-
 
 
 /**Based on Network Unit Testing in Swift*/
@@ -189,6 +191,15 @@ class BlockchainOperations{
         }
     }
     
+    func decodeJSONBlockData(_ data: Data)->Block?{
+       
+        guard  let info = try? JSONDecoder().decode(Block.self, from: data) else{
+            return nil
+        }
+        return info
+    }
+    
+    
     func getBlockContents(block:String,  completion: @escaping blockCompleteClosure){
         let urlString = self.producer.GET_BLOCK_ENDPOINT
         
@@ -209,10 +220,15 @@ class BlockchainOperations{
                 return
             }
             
-            guard  let info = try? JSONDecoder().decode(Block.self, from: data) else{
+            guard var info = self.decodeJSONBlockData(data) else {
                 completion(nil,EOSError.parsingJSON)
                 return
             }
+            
+            //add raw information to the Block data
+            info.content_string = String(data: data, encoding: .utf8)
+            
+            
             
             completion(info,nil)
         }

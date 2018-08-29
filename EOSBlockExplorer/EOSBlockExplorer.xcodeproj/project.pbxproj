@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11DD0B7221364684005714BF /* block_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 11DD0B7021364683005714BF /* block_info.json */; };
+		11DD0B7321364684005714BF /* block_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 11DD0B7021364683005714BF /* block_info.json */; };
+		11DD0B7421364684005714BF /* chain_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 11DD0B7121364683005714BF /* chain_info.json */; };
+		11DD0B7521364684005714BF /* chain_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 11DD0B7121364683005714BF /* chain_info.json */; };
+		11DD0B7621364B84005714BF /* BlockchainClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94FF213592D8002BECCF /* BlockchainClasses.swift */; };
 		77AC94CD21358FA7002BECCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94CC21358FA7002BECCF /* AppDelegate.swift */; };
-		77AC94CF21358FA7002BECCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94CE21358FA7002BECCF /* ViewController.swift */; };
+		77AC94CF21358FA7002BECCF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94CE21358FA7002BECCF /* DetailsViewController.swift */; };
 		77AC94D221358FA7002BECCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77AC94D021358FA7002BECCF /* Main.storyboard */; };
 		77AC94D521358FA7002BECCF /* EOSBlockExplorer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94D321358FA7002BECCF /* EOSBlockExplorer.xcdatamodeld */; };
 		77AC94D721358FA9002BECCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77AC94D621358FA9002BECCF /* Assets.xcassets */; };
@@ -37,9 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11DD0B7021364683005714BF /* block_info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = block_info.json; sourceTree = "<group>"; };
+		11DD0B7121364683005714BF /* chain_info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chain_info.json; sourceTree = "<group>"; };
 		77AC94C921358FA7002BECCF /* EOSBlockExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EOSBlockExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77AC94CC21358FA7002BECCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		77AC94CE21358FA7002BECCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		77AC94CE21358FA7002BECCF /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		77AC94D121358FA7002BECCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77AC94D421358FA7002BECCF /* EOSBlockExplorer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EOSBlockExplorer.xcdatamodel; sourceTree = "<group>"; };
 		77AC94D621358FA9002BECCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,9 +87,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11DD0B6F2136452B005714BF /* TestingData */ = {
+			isa = PBXGroup;
+			children = (
+				11DD0B7021364683005714BF /* block_info.json */,
+				11DD0B7121364683005714BF /* chain_info.json */,
+			);
+			path = TestingData;
+			sourceTree = "<group>";
+		};
 		77AC94C021358FA7002BECCF = {
 			isa = PBXGroup;
 			children = (
+				11DD0B6F2136452B005714BF /* TestingData */,
 				77AC94CB21358FA7002BECCF /* EOSBlockExplorer */,
 				77AC94E321358FA9002BECCF /* EOSBlockExplorerTests */,
 				77AC94EE21358FA9002BECCF /* EOSBlockExplorerUITests */,
@@ -104,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				77AC94CC21358FA7002BECCF /* AppDelegate.swift */,
-				77AC94CE21358FA7002BECCF /* ViewController.swift */,
+				77AC94CE21358FA7002BECCF /* DetailsViewController.swift */,
 				77AC94D021358FA7002BECCF /* Main.storyboard */,
 				77AC94FD21359020002BECCF /* BlockExplorerViewController.swift */,
 				77AC94FF213592D8002BECCF /* BlockchainClasses.swift */,
@@ -239,8 +256,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				77AC94DA21358FA9002BECCF /* LaunchScreen.storyboard in Resources */,
+				11DD0B7221364684005714BF /* block_info.json in Resources */,
 				77AC94D721358FA9002BECCF /* Assets.xcassets in Resources */,
 				77AC94D221358FA7002BECCF /* Main.storyboard in Resources */,
+				11DD0B7421364684005714BF /* chain_info.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +267,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11DD0B7321364684005714BF /* block_info.json in Resources */,
+				11DD0B7521364684005714BF /* chain_info.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77AC9500213592D8002BECCF /* BlockchainClasses.swift in Sources */,
-				77AC94CF21358FA7002BECCF /* ViewController.swift in Sources */,
+				77AC94CF21358FA7002BECCF /* DetailsViewController.swift in Sources */,
 				77AC94FE21359020002BECCF /* BlockExplorerViewController.swift in Sources */,
 				77AC94D521358FA7002BECCF /* EOSBlockExplorer.xcdatamodeld in Sources */,
 				77AC94CD21358FA7002BECCF /* AppDelegate.swift in Sources */,
@@ -277,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11DD0B7621364B84005714BF /* BlockchainClasses.swift in Sources */,
 				77AC94E521358FA9002BECCF /* EOSBlockExplorerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

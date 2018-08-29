@@ -8,11 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DetailsViewController: UIViewController {
 
+    //Current Block Data
+    var block:Block?
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let blockops = BlockchainOperations()
+        //Get local data
+        
+
+//        blockops.decodeJSONBlockData(<#T##data: Data##Data#>)
+        
     }
 
     override func didReceiveMemoryWarning() {

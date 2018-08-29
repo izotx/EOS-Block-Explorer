@@ -1,0 +1,14 @@
+{
+"server_version": "817b1d01",
+"chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
+"head_block_num": 13367996,
+"last_irreversible_block_num": 13367671,
+"last_irreversible_block_id": "00cbf977e4c7cb023deabd3cb625dfc3152b409f20dea6bc163f3a1003ed8049",
+"head_block_id": "00cbfabc3cd4f5da9d97e0fb9dfee2a71265c0325acfb52354bfe08cb3896984",
+"head_block_time": "2018-08-27T20:19:12.000",
+"head_block_producer": "argentinaeos",
+"virtual_block_cpu_limit": 14246122,
+"virtual_block_net_limit": 1048576000,
+"block_cpu_limit": 199900,
+"block_net_limit": 1048576
+}

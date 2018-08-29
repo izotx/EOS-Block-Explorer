@@ -17,6 +17,7 @@ class BlockExplorerViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     private var blockchainops:BlockchainOperations!
     private var datasource = BlockDataSource()
+    private var currentBlock:Block?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +72,8 @@ class BlockExplorerViewController: UIViewController, UITableViewDelegate {
     
 
     // MARK: - Navigation
-
+    
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -81,8 +83,20 @@ class BlockExplorerViewController: UIViewController, UITableViewDelegate {
 
 }
 
+//Delegate methods
 extension BlockExplorerViewController{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //get current block
+        let block = self.datasource.blocks[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        vc.block = block
+        navigationController?.pushViewController(vc, animated: true)
+        
+        
+    }
+
 }
 
 
@@ -116,7 +130,9 @@ class BlockDataSource: NSObject, UITableViewDataSource{
         }
         cell.textLabel?.text = String(block.block_num)
         cell.accessoryType = .detailDisclosureButton
-
+        
+        print(block.content_string)
+        
         return cell
     }
     
