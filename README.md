@@ -2,10 +2,8 @@
 
 App Preview
 ========
+![app preview](https://thumbs.gfycat.com/BewitchedBlackandwhiteIbadanmalimbe-size_restricted.gif "App Preview")
 
-<iframe src='https://gfycat.com/ifr/BewitchedBlackandwhiteIbadanmalimbe' frameborder='0' scrolling='no' allowfullscreen width='640' height='1199'></iframe>
-
-https://thumbs.gfycat.com/BewitchedBlackandwhiteIbadanmalimbe-size_restricted.gif
 
 User Story:
 ========
@@ -37,6 +35,7 @@ Bonus Criteria:
 - [] Render the (markdown) ricardian contracts included in the abi with the relevant data
 from the action. Example implementation in Javascript available here for reference:
 https://codepen.io/chris-allnutt/pen/ERXwjb
+
 
 
 
