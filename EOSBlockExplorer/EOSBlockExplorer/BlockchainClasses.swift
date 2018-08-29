@@ -128,7 +128,8 @@ class BlockchainOperations{
     
     func downloadBlocks(_ blocks_num:Int, completion: @escaping blocksCompleteClosure ){
         if isRunning{
-            completion(self.blocks, EOSError.currentlyDownloading)
+//            completion(self.blocks, EOSError.currentlyDownloading)
+            print(EOSError.currentlyDownloading)
             return
         }
         
@@ -199,24 +200,37 @@ class BlockchainOperations{
                 return
             }
             
-            guard let info = try? JSONDecoder().decode(ChainInfo.self, from: data) else{
-                completion(nil, EOSError.parsingJSON)
+            guard let info = self.decodeJSONChainData(data) else {
+                completion(nil,EOSError.parsingJSON)
                 return
             }
             
+
             completion(info,nil)
         }
     }
     
+
+    /**Helper for decoding chain info*/
+    func decodeJSONChainData(_ data: Data)->ChainInfo?{
+        
+        guard var info = try? JSONDecoder().decode(ChainInfo.self, from: data) else{
+            return nil
+        }
+        
+        return info
+    }
+
+    
+    /**Helper for decoding blocks */
     func decodeJSONBlockData(_ data: Data)->Block?{
        
         guard  var info = try? JSONDecoder().decode(Block.self, from: data) else{
             return nil
         }
-        
+       
         //add raw information to the Block data
         info.content_string = String(data: data, encoding: .utf8)
-        
         return info
     }
     

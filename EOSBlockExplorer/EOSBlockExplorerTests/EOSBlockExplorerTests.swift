@@ -35,25 +35,42 @@ class EOSBlockExplorerTests: XCTestCase {
     func testParsingBlockData(){
         let blockops = BlockchainOperations()
         guard let data = blockData else{
+            XCTAssert(false, "Something went wrong with getting the data. Data malformed?")
             //Throw Error here!
             return
         }
 
-//      XCTAssertNotNil(blockData,"Block file data corrupted?")
         guard let block = blockops.decodeJSONBlockData(data) else{
+            XCTAssert(false, "Something went wrong with decoding JSON")
+             return
+        }
+        
+        
+        XCTAssert(block.producer == "eoslaomaocom", "Block Producer should be diferent!")
+        XCTAssert(block.block_num == 13363637, "Block Number should be diferent!")
+        XCTAssert(block.producer_signature == "SIG_K1_K9JKkPZ9jVn1ZfpAhgQrsyLRe6pJ7X9rEUsETvShWDQTgyiseHtPX3NwdmM6evAiGaeZ6cQxiMM43HSY2Xak8hfcjLvYWi", "Block Signature should be diferent!")
+        XCTAssert(block.transactions.count == 128)
+    }
+    
+    func testParsingChainData(){
+        let blockops = BlockchainOperations()
+        guard let data = blockData else{
+            XCTAssert(false, "Something went wrong with getting the data. Data malformed?")
             //Throw Error here!
             return
         }
         
-        //Check data consistency here
+        guard let block = blockops.decodeJSONBlockData(data) else{
+            XCTAssert(false, "Something went wrong with decoding JSON")
+            return
+        }
         
-//        XCTAssertNotNil(block,"Block data corrupted?")
-       
         
-    }
-    
-    func testParsingChainData(){
-        
+        XCTAssert(block.producer == "eoslaomaocom", "Block Producer should be diferent!")
+        XCTAssert(block.block_num == 13363637, "Block Number should be diferent!")
+        XCTAssert(block.producer_signature == "SIG_K1_K9JKkPZ9jVn1ZfpAhgQrsyLRe6pJ7X9rEUsETvShWDQTgyiseHtPX3NwdmM6evAiGaeZ6cQxiMM43HSY2Xak8hfcjLvYWi", "Block Signature should be diferent!")
+        XCTAssert(block.transactions.count == 128)
+
     }
     
     func testPerformanceExample() {
