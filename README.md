@@ -43,12 +43,12 @@ https://codepen.io/chris-allnutt/pen/ERXwjb
 Screenshots
 ========
 <p align="center">
-<img src="Screenshots/sim1.png" width="33%" align="left" />
-<img src="Screenshots/sim2.png" width="33%" align="left" />
-<img src="Screenshots/sim3.png" width="33%" align="left" />
-<img src="Screenshots/sim4.png" width="33%" align="left" />
-<img src="Screenshots/sim5.png" width="33%" align="left" />
-<img src="Screenshots/sim6.png" width="33%" align="left" />
+<img src="Screenshots/sim1.png" width="30%" align="left" />
+<img src="Screenshots/sim2.png" width="30%" align="left" />
+<img src="Screenshots/sim3.png" width="30%" align="left" />
+<img src="Screenshots/sim4.png" width="30%" align="left" />
+<img src="Screenshots/sim5.png" width="30%" align="left" />
+<img src="Screenshots/sim6.png" width="30%" align="left" />
 </p>
 
 
