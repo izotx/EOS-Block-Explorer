@@ -1,11 +1,5 @@
 # EOS Block Explorer
 
-App Preview
-========
-![app preview](https://thumbs.gfycat.com/BewitchedBlackandwhiteIbadanmalimbe-size_restricted.gif "App Preview")
-
-
-
 User Story:
 ========
 ```
@@ -13,13 +7,32 @@ As an EOS User I want to see the contents of the most recent blocks on the publi
 blockchain.
 
 ```
+
+Developer Notes
+=========
+
+- Blockchain related operations can be found in the Blockchain.swift file 
+- Unit tests that cover mostly JSON parsing can be found in: EOSBlockExplorerTests.swift
+
+
+Given more time I would implement several things differently:
+1. I would chain networking operations using RxSwift or PromiseKit
+2. Core Data and fetch view controller for displaying 
+3. Sync with blockchain beyond 20 blocks, while also updating the newest block 
+
+
+App Preview
+========
+![app preview](https://thumbs.gfycat.com/BewitchedBlackandwhiteIbadanmalimbe-size_restricted.gif "App Preview")
+
+
+
 Resources:
 ========
-● EOS: https://github.com/EOSIO/eos
-● Public Node endpoint: https://api.eosnewyork.io/v1
-○ Utilize RPC endpoints to get necessary data
-● RPC Endpoint Documentation (block contents may vary):
-https://developers.eos.io/eosio-nodeos/reference
+-  EOS: https://github.com/EOSIO/eos
+-  Public Node endpoint: https://api.eosnewyork.io/v1
+-  Utilize RPC endpoints to get necessary data
+-  RPC Endpoint Documentation (block contents may vary): https://developers.eos.io/eosio-nodeos/reference
 
 Acceptance Criteria:
 ========
