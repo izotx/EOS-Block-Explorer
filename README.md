@@ -1,5 +1,9 @@
 # EOS Block Explorer
 
+App Preview
+========
+<iframe src='https://gfycat.com/ifr/BewitchedBlackandwhiteIbadanmalimbe' frameborder='0' scrolling='no' allowfullscreen width='640' height='1199'></iframe>
+
 User Story:
 ========
  As an EOS User I want to see the contents of the most recent blocks on the public
@@ -31,8 +35,5 @@ Bonus Criteria:
 from the action. Example implementation in Javascript available here for reference:
 https://codepen.io/chris-allnutt/pen/ERXwjb
 
-App Preview
-========
-https://gfycat.com/BewitchedBlackandwhiteIbadanmalimbe
 
 
