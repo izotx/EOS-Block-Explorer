@@ -5,11 +5,14 @@ App Preview
 ![app preview](https://thumbs.gfycat.com/BewitchedBlackandwhiteIbadanmalimbe-size_restricted.gif "App Preview")
 
 
+
 User Story:
 ========
- As an EOS User I want to see the contents of the most recent blocks on the public
+```
+As an EOS User I want to see the contents of the most recent blocks on the public
 blockchain.
 
+```
 Resources:
 ========
 ● EOS: https://github.com/EOSIO/eos
@@ -36,6 +39,17 @@ Bonus Criteria:
 from the action. Example implementation in Javascript available here for reference:
 https://codepen.io/chris-allnutt/pen/ERXwjb
 
+
+Screenshots
+========
+<p align="center">
+<img src="Screenshots/sim1.png" width="30%" align="left" />
+<img src="Screenshots/sim2.png" width="30%" align="left" />
+<img src="Screenshots/sim3.png" width="30%" align="left" />
+<img src="Screenshots/sim4.png" width="30%" align="left" />
+<img src="Screenshots/sim5.png" width="30%" align="left" />
+<img src="Screenshots/sim6.png" width="30%" align="left" />
+</p>
 
 
 
