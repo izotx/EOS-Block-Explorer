@@ -39,12 +39,14 @@ class EOSBlockExplorerTests: XCTestCase {
             return
         }
 
-//        XCTAssertNotNil(blockData,"Block file data corrupted?")
+//      XCTAssertNotNil(blockData,"Block file data corrupted?")
         guard let block = blockops.decodeJSONBlockData(data) else{
             //Throw Error here!
             return
         }
-
+        
+        //Check data consistency here
+        
 //        XCTAssertNotNil(block,"Block data corrupted?")
        
         

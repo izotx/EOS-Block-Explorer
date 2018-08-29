@@ -10,13 +10,14 @@ import UIKit
 
 enum CellIds:String{
    case BlockCell = "BlockCell"
+   case BlockDetailsCell = "BlockInfoCell"
 }
 
 
 class BlockExplorerViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     private var blockchainops:BlockchainOperations!
-    private var datasource = BlockDataSource()
+    private var datasource = BlocksDataSource()
     private var currentBlock:Block?
     
     override func viewDidLoad() {
@@ -91,7 +92,7 @@ extension BlockExplorerViewController{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let vc = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
-        vc.block = block
+        vc.updateBlockInfo(_block: block)
         navigationController?.pushViewController(vc, animated: true)
         
         
@@ -101,7 +102,7 @@ extension BlockExplorerViewController{
 
 
 
-class BlockDataSource: NSObject, UITableViewDataSource{
+class BlocksDataSource: NSObject, UITableViewDataSource{
     
     var blocks = [Block]()
     
@@ -131,7 +132,7 @@ class BlockDataSource: NSObject, UITableViewDataSource{
         cell.textLabel?.text = String(block.block_num)
         cell.accessoryType = .detailDisclosureButton
         
-        print(block.content_string)
+//        print(block.content_string)
         
         return cell
     }

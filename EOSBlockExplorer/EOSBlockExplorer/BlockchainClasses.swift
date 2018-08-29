@@ -55,6 +55,23 @@ struct Block:Decodable{
     var content_string:String?
 }
 
+struct BlockDetail{
+    let key:String
+    let value:String
+}
+
+extension Block{
+    //I am sure there is a better way to retrieve the properties
+    func getKeyValues()->[BlockDetail]{
+        var info = [BlockDetail]()
+        info.append(BlockDetail(key: "Producer", value: self.producer))
+        info.append(BlockDetail(key: "Signature", value: self.producer_signature))
+        info.append(BlockDetail(key: "Transactions", value: "\(self.transactions.count)"))
+        
+        return info
+    }
+}
+
 struct Transaction:Decodable{
     let status:String
     var content_string:String?
@@ -224,6 +241,7 @@ class BlockchainOperations{
                 completion(nil,EOSError.parsingJSON)
                 return
             }
+            
             
             //add raw information to the Block data
             info.content_string = String(data: data, encoding: .utf8)
