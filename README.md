@@ -4,12 +4,25 @@ App Preview
 ========
 ![app preview](https://thumbs.gfycat.com/BewitchedBlackandwhiteIbadanmalimbe-size_restricted.gif "App Preview")
 
+Screenshots
+========
+
+<img src="Screenshots/sim1.png" width="200px" align="left"/>
+<img src="Screenshots/sim2.png" width="200px" align="left"/>
+<img src="Screenshots/sim3.png" width="200px" align="left"/>
+<img src="Screenshots/sim4.png" width="200px" align="left"/>
+<img src="Screenshots/sim5.png" width="200px" align="left"/>
+<img src="Screenshots/sim6.png" width="200px" align="left"/>
+
+
 
 User Story:
 ========
- As an EOS User I want to see the contents of the most recent blocks on the public
+```
+As an EOS User I want to see the contents of the most recent blocks on the public
 blockchain.
 
+```
 Resources:
 ========
 ● EOS: https://github.com/EOSIO/eos
