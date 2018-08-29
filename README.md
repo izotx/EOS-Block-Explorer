@@ -29,11 +29,10 @@ App Preview
 
 Resources:
 ========
-● EOS: https://github.com/EOSIO/eos
-● Public Node endpoint: https://api.eosnewyork.io/v1
-○ Utilize RPC endpoints to get necessary data
-● RPC Endpoint Documentation (block contents may vary):
-https://developers.eos.io/eosio-nodeos/reference
+-  EOS: https://github.com/EOSIO/eos
+-  Public Node endpoint: https://api.eosnewyork.io/v1
+-  Utilize RPC endpoints to get necessary data
+-  RPC Endpoint Documentation (block contents may vary): https://developers.eos.io/eosio-nodeos/reference
 
 Acceptance Criteria:
 ========
