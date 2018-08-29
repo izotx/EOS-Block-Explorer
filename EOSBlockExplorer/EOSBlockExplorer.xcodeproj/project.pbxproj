@@ -12,8 +12,9 @@
 		11DD0B7421364684005714BF /* chain_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 11DD0B7121364683005714BF /* chain_info.json */; };
 		11DD0B7521364684005714BF /* chain_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 11DD0B7121364683005714BF /* chain_info.json */; };
 		11DD0B7621364B84005714BF /* BlockchainClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94FF213592D8002BECCF /* BlockchainClasses.swift */; };
+		7735F14F2136E687004AF945 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94CE21358FA7002BECCF /* DetailsViewController.swift */; };
+		7735F1512136F201004AF945 /* Unused.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735F1502136F201004AF945 /* Unused.swift */; };
 		77AC94CD21358FA7002BECCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94CC21358FA7002BECCF /* AppDelegate.swift */; };
-		77AC94CF21358FA7002BECCF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94CE21358FA7002BECCF /* DetailsViewController.swift */; };
 		77AC94D221358FA7002BECCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77AC94D021358FA7002BECCF /* Main.storyboard */; };
 		77AC94D521358FA7002BECCF /* EOSBlockExplorer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94D321358FA7002BECCF /* EOSBlockExplorer.xcdatamodeld */; };
 		77AC94D721358FA9002BECCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77AC94D621358FA9002BECCF /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		11DD0B7021364683005714BF /* block_info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = block_info.json; sourceTree = "<group>"; };
 		11DD0B7121364683005714BF /* chain_info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chain_info.json; sourceTree = "<group>"; };
+		7735F1502136F201004AF945 /* Unused.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unused.swift; sourceTree = "<group>"; };
 		77AC94C921358FA7002BECCF /* EOSBlockExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EOSBlockExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77AC94CC21358FA7002BECCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77AC94CE21358FA7002BECCF /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				77AC94CC21358FA7002BECCF /* AppDelegate.swift */,
 				77AC94CE21358FA7002BECCF /* DetailsViewController.swift */,
+				7735F1502136F201004AF945 /* Unused.swift */,
 				77AC94D021358FA7002BECCF /* Main.storyboard */,
 				77AC94FD21359020002BECCF /* BlockExplorerViewController.swift */,
 				77AC94FF213592D8002BECCF /* BlockchainClasses.swift */,
@@ -287,10 +290,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				77AC9500213592D8002BECCF /* BlockchainClasses.swift in Sources */,
-				77AC94CF21358FA7002BECCF /* DetailsViewController.swift in Sources */,
 				77AC94FE21359020002BECCF /* BlockExplorerViewController.swift in Sources */,
 				77AC94D521358FA7002BECCF /* EOSBlockExplorer.xcdatamodeld in Sources */,
 				77AC94CD21358FA7002BECCF /* AppDelegate.swift in Sources */,
+				7735F14F2136E687004AF945 /* DetailsViewController.swift in Sources */,
+				7735F1512136F201004AF945 /* Unused.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -451,7 +455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;

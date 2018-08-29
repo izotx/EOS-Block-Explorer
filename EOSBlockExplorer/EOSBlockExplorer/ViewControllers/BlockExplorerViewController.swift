@@ -11,6 +11,7 @@ import UIKit
 enum CellIds:String{
    case BlockCell = "BlockCell"
    case BlockDetailsCell = "BlockInfoCell"
+   case LongTextCell = "LongTextCell"
 }
 
 
@@ -19,6 +20,7 @@ class BlockExplorerViewController: UIViewController, UITableViewDelegate {
     private var blockchainops:BlockchainOperations!
     private var datasource = BlocksDataSource()
     private var currentBlock:Block?
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +74,7 @@ class BlockExplorerViewController: UIViewController, UITableViewDelegate {
     }
     
 
+
     // MARK: - Navigation
     
     
@@ -81,8 +84,8 @@ class BlockExplorerViewController: UIViewController, UITableViewDelegate {
         // Pass the selected object to the new view controller.
         
     }
-
 }
+
 
 //Delegate methods
 extension BlockExplorerViewController{
@@ -94,10 +97,7 @@ extension BlockExplorerViewController{
         let vc = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
         vc.updateBlockInfo(_block: block)
         navigationController?.pushViewController(vc, animated: true)
-        
-        
     }
-
 }
 
 
@@ -130,10 +130,9 @@ class BlocksDataSource: NSObject, UITableViewDataSource{
 
         }
         cell.textLabel?.text = String(block.block_num)
-        cell.accessoryType = .detailDisclosureButton
-        
-//        print(block.content_string)
-        
+        cell.accessoryType = .disclosureIndicator
+        cell.imageView?.image = UIImage(named: "tag")
+            
         return cell
     }
     

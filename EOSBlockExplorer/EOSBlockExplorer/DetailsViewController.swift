@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 extension DetailsViewController{
     //Just for testing purposes
     func loadLocalData()->Block?{
@@ -32,43 +34,57 @@ extension DetailsViewController{
 
 
 
-class DetailsViewController: UIViewController {
+class DetailsViewController: UIViewController, UITableViewDelegate {
 
-
+    //Outlets
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var producerLabel: UILabel!
+    @IBOutlet weak var singature: UILabel!
+    @IBOutlet weak var transactionsLabel: UILabel!
+    @IBOutlet weak var transactionDetailsSwitch: UISwitch!
+    
     //Current Block Data
     private var block:Block?
-    private var datasource:BlockDataSource?
+   
     
     func updateBlockInfo(_block:Block){
         self.block = _block
-        
     }
     
+    func showBlockDetails(visible:Bool){
+        self.textView.isHidden = !visible
+    }
+    
+    //Responsible for basic updates of UI
+    func updateUI(){
+        self.textView.text = block?.content_string
+        self.producerLabel.text = block?.producer
+        self.singature.text = block?.producer_signature
+        if let transactions = block?.transactions{
+                    self.transactionsLabel.text =  "\(transactions.count)"
+        }else{
+              self.transactionsLabel.text = "0"
+        }
+        showBlockDetails(visible: transactionDetailsSwitch.isOn)
+    }
+    
+    @IBAction func showTransactionSwitchAction(_ sender: UISwitch) {
+        showBlockDetails(visible: sender.isOn)
+    }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        if let b = loadLocalData()
-        {
-            updateBlockInfo(_block: b)
-        }
-        
-        datasource = BlockDataSource()
-        
-        if let b = self.block{
-            self.title = "Block \(b.block_num)"
-            datasource?.info = b.getKeyValues()
-            print("Info")
-            print(datasource?.info)
-        }else{
-            print("block not loaded")
-        }
 
-//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellIds.BlockDetailsCell.rawValue)
-        tableView.dataSource = datasource
-        tableView.reloadData()
+//Testing with local data
+//        if let b = loadLocalData()
+//        {
+//            updateBlockInfo(_block: b)
+//        }
         
+        updateUI()
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,40 +93,18 @@ class DetailsViewController: UIViewController {
     }
 }
 
-class BlockDataSource: NSObject,UITableViewDataSource{
-    var info = [BlockDetail]()
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int
-    {
-        return 1
+extension DetailsViewController{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        return info.count
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return UITableViewAutomaticDimension
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-        //Just a generic table view cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIds.BlockDetailsCell.rawValue, for: indexPath as IndexPath)
-        cell.textLabel?.text = "aaa "
-        //Return general information
-        if indexPath.section == 0{
-            let record = info[indexPath.row]
-            cell.detailTextLabel?.text = record.key
-            cell.textLabel?.text = record.value
-            
-        }
-        
-        
-        //We will have different Cells. Basic ones will contain key/value info
-        
-        
-        
-        return cell
-    }
 }
+
 
 
 

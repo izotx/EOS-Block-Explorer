@@ -210,9 +210,13 @@ class BlockchainOperations{
     
     func decodeJSONBlockData(_ data: Data)->Block?{
        
-        guard  let info = try? JSONDecoder().decode(Block.self, from: data) else{
+        guard  var info = try? JSONDecoder().decode(Block.self, from: data) else{
             return nil
         }
+        
+        //add raw information to the Block data
+        info.content_string = String(data: data, encoding: .utf8)
+        
         return info
     }
     
@@ -237,15 +241,10 @@ class BlockchainOperations{
                 return
             }
             
-            guard var info = self.decodeJSONBlockData(data) else {
+            guard let info = self.decodeJSONBlockData(data) else {
                 completion(nil,EOSError.parsingJSON)
                 return
             }
-            
-            
-            //add raw information to the Block data
-            info.content_string = String(data: data, encoding: .utf8)
-            
             
             
             completion(info,nil)
