@@ -4,16 +4,6 @@ App Preview
 ========
 ![app preview](https://thumbs.gfycat.com/BewitchedBlackandwhiteIbadanmalimbe-size_restricted.gif "App Preview")
 
-Screenshots
-========
-
-<img src="Screenshots/sim1.png" width="200px" align="left"/>
-<img src="Screenshots/sim2.png" width="200px" align="left"/>
-<img src="Screenshots/sim3.png" width="200px" align="left"/>
-<img src="Screenshots/sim4.png" width="200px" align="left"/>
-<img src="Screenshots/sim5.png" width="200px" align="left"/>
-<img src="Screenshots/sim6.png" width="200px" align="left"/>
-
 
 
 User Story:
@@ -49,6 +39,17 @@ Bonus Criteria:
 from the action. Example implementation in Javascript available here for reference:
 https://codepen.io/chris-allnutt/pen/ERXwjb
 
+
+Screenshots
+========
+<p align="center">
+<img src="Screenshots/sim1.png" width="33%" align="left" />
+<img src="Screenshots/sim2.png" width="33%" align="left" />
+<img src="Screenshots/sim3.png" width="33%" align="left" />
+<img src="Screenshots/sim4.png" width="33%" align="left" />
+<img src="Screenshots/sim5.png" width="33%" align="left" />
+<img src="Screenshots/sim6.png" width="33%" align="left" />
+</p>
 
 
 
