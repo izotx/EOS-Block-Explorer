@@ -5,9 +5,28 @@
 //  Created by Janusz Local Admin on 8/29/18.
 //  Copyright © 2018 izotx. All rights reserved.
 //
-
+/** Digital wasteland Currently Unused methods and classes that I was planning to include in the app */
 import Foundation
 import UIKit
+
+struct BlockDetail{
+    let key:String
+    let value:String
+}
+
+extension Block{
+    //I am sure there is a better way to retrieve the properties
+    func getKeyValues()->[BlockDetail]{
+        var info = [BlockDetail]()
+        info.append(BlockDetail(key: "Producer", value: self.producer))
+        info.append(BlockDetail(key: "Signature", value: self.producer_signature))
+        info.append(BlockDetail(key: "Transactions", value: "\(self.transactions.count)"))
+        
+        return info
+    }
+}
+
+
 
 class BlockDataSource: NSObject,UITableViewDataSource{
     var info = [BlockDetail]()

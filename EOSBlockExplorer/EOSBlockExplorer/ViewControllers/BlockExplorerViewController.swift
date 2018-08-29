@@ -8,12 +8,6 @@
 
 import UIKit
 
-enum CellIds:String{
-   case BlockCell = "BlockCell"
-   case BlockDetailsCell = "BlockInfoCell"
-   case LongTextCell = "LongTextCell"
-}
-
 
 class BlockExplorerViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!

@@ -22,19 +22,6 @@ class NewYorkProducer:Producer{
 
 
 
-enum EOSError: Error {
-    case unknownError
-    case connectionError
-    case invalidCredentials
-    case invalidRequest
-    case notFound
-    case invalidResponse
-    case serverError
-    case serverUnavailable
-    case timeOut
-    case parsingJSON
-    case currentlyDownloading
-}
 
 
 
@@ -55,22 +42,7 @@ struct Block:Decodable{
     var content_string:String?
 }
 
-struct BlockDetail{
-    let key:String
-    let value:String
-}
 
-extension Block{
-    //I am sure there is a better way to retrieve the properties
-    func getKeyValues()->[BlockDetail]{
-        var info = [BlockDetail]()
-        info.append(BlockDetail(key: "Producer", value: self.producer))
-        info.append(BlockDetail(key: "Signature", value: self.producer_signature))
-        info.append(BlockDetail(key: "Transactions", value: "\(self.transactions.count)"))
-        
-        return info
-    }
-}
 
 struct Transaction:Decodable{
     let status:String
@@ -78,33 +50,19 @@ struct Transaction:Decodable{
 }
 
 
-/**Based on Network Unit Testing in Swift*/
-class HttpClient {
-    typealias completeClosure = ( _ data: Data?, _ error: Error?)->Void
-    private let session: URLSession
-    
-    init(session: URLSession) {
-        self.session = session
-    }
-    
-    func post( url: URL, body:Data?, callback: @escaping completeClosure ) {
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.httpBody = body
-        let task = session.dataTask(with: request) { (data, response, error) in
-            callback(data, error)
-        }
-        task.resume()
-    }
-}
 
 
-/**Responsible for blockchain operations */
+/**Responsible for retrieving EOS blockchain related information */
 class BlockchainOperations{
+    /**Can be substituted with a mock client*/
     private let client:HttpClient
     private var max:Int!
+
+    /**List of last n blocks*/
     private var blocks = [Block]()
+    
     private var isRunning:Bool = false
+    /**Easy to switch block producer*/
     private var producer:Producer!
     
     //Completion blocks
@@ -213,8 +171,7 @@ class BlockchainOperations{
 
     /**Helper for decoding chain info*/
     func decodeJSONChainData(_ data: Data)->ChainInfo?{
-        
-        guard var info = try? JSONDecoder().decode(ChainInfo.self, from: data) else{
+        guard let info = try? JSONDecoder().decode(ChainInfo.self, from: data) else{
             return nil
         }
         

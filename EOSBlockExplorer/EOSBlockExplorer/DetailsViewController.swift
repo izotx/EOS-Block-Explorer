@@ -10,27 +10,6 @@ import UIKit
 
 
 
-extension DetailsViewController{
-    //Just for testing purposes
-    func loadLocalData()->Block?{
-        let blockops = BlockchainOperations()
-        let urlpath     = Bundle.main.path(forResource: "block_info", ofType: "json")
-        let url         = NSURL.fileURL(withPath: urlpath!)
-        let blockData = try? Data(contentsOf: url)
-        guard let data = blockData else{
-                print("data doesn't exist!")
-            //Throw Error here!
-            return nil
-        }
-        
-        guard let block = blockops.decodeJSONBlockData(data) else{
-                print("Wrong data format")
-            //Throw Error here!
-            return nil
-        }
-        return block
-    }
-}
 
 
 
@@ -105,6 +84,28 @@ extension DetailsViewController{
     
 }
 
+
+extension DetailsViewController{
+    //Just for testing purposes
+    func loadLocalData()->Block?{
+        let blockops = BlockchainOperations()
+        let urlpath     = Bundle.main.path(forResource: "block_info", ofType: "json")
+        let url         = NSURL.fileURL(withPath: urlpath!)
+        let blockData = try? Data(contentsOf: url)
+        guard let data = blockData else{
+            print("data doesn't exist!")
+            //Throw Error here!
+            return nil
+        }
+        
+        guard let block = blockops.decodeJSONBlockData(data) else{
+            print("Wrong data format")
+            //Throw Error here!
+            return nil
+        }
+        return block
+    }
+}
 
 
 
