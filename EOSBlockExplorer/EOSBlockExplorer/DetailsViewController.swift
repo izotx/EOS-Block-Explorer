@@ -16,11 +16,13 @@ extension DetailsViewController{
         let url         = NSURL.fileURL(withPath: urlpath!)
         let blockData = try? Data(contentsOf: url)
         guard let data = blockData else{
+                print("data doesn't exist!")
             //Throw Error here!
             return nil
         }
         
         guard let block = blockops.decodeJSONBlockData(data) else{
+                print("Wrong data format")
             //Throw Error here!
             return nil
         }
@@ -47,18 +49,25 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        _ = loadLocalData()
-
+        if let b = loadLocalData()
+        {
+            updateBlockInfo(_block: b)
+        }
+        
         datasource = BlockDataSource()
         
         if let b = self.block{
             self.title = "Block \(b.block_num)"
             datasource?.info = b.getKeyValues()
+            print("Info")
+            print(datasource?.info)
+        }else{
+            print("block not loaded")
         }
 
 //        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellIds.BlockDetailsCell.rawValue)
         tableView.dataSource = datasource
-      
+        tableView.reloadData()
         
     }
 
@@ -85,13 +94,13 @@ class BlockDataSource: NSObject,UITableViewDataSource{
     {
         //Just a generic table view cell
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIds.BlockDetailsCell.rawValue, for: indexPath as IndexPath)
-        
+        cell.textLabel?.text = "aaa "
         //Return general information
         if indexPath.section == 0{
             let record = info[indexPath.row]
             cell.detailTextLabel?.text = record.key
             cell.textLabel?.text = record.value
-
+            
         }
         
         
