@@ -10,15 +10,26 @@ blockchain.
 
 Developer Notes
 =========
-
+- There are two apps in the repositiory:
+#### App 1 EOS BlockExplorer: Main task
+ ##### Features
 - Blockchain related operations can be found in the Blockchain.swift file 
 - Unit tests that cover mostly JSON parsing can be found in: EOSBlockExplorerTests.swift
-
-
-Given more time I would implement several things differently:
+- Doesn't use external libraries
+ ##### Improvements
+ Given more time I would implement several things differently:
 1. I would chain networking operations using RxSwift or PromiseKit
-2. Core Data and fetch view controller for displaying 
-3. Sync with blockchain beyond 20 blocks, while also updating the newest block 
+2. Core Data and fetch view controller for displaying blocks 
+3. Sync with blockchain beyond 20 first blocks
+
+#### App 2 Ricardian App: Bonus task
+You can find the app in RicardianApp. 
+ ##### Features
+- reading and displaying Ricardian contracts based on specified transaction id
+- no markup. I ran out of time
+- New York block producer's api doesn't respond correctly to get transaction. I had to use one in Asia: https://api1.eosasia.one
+- use of external libraries like SwiftyJson, AlamoFire, PromiseKit
+
 
 
 App Preview
@@ -62,6 +73,7 @@ Screenshots
 <img src="Screenshots/sim4.png" width="30%" align="left" />
 <img src="Screenshots/sim5.png" width="30%" align="left" />
 <img src="Screenshots/sim6.png" width="30%" align="left" />
+<img src="Screenshots/sim7.png" width="30%" align="left" />
 </p>
 
 
