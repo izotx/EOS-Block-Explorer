@@ -20,17 +20,11 @@ class NewYorkProducer:Producer{
     var GET_BLOCK_ENDPOINT = "https://api.eosnewyork.io/v1/chain/get_block"
 }
 
-
-
-
-
-
 struct ChainInfo:Decodable{
     let lastBlock:Int
     enum CodingKeys : String, CodingKey {
         case lastBlock = "last_irreversible_block_num"
     }
-
 }
 
 struct Block:Decodable{
@@ -41,7 +35,6 @@ struct Block:Decodable{
     let transactions:[Transaction]
     var content_string:String?
 }
-
 
 
 struct Transaction:Decodable{
