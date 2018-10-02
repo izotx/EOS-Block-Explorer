@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 protocol Producer{
     var PRODUCER_URL:String {get}
@@ -27,23 +28,6 @@ struct ChainInfo:Decodable{
     }
 }
 
-struct Block:Decodable{
-    let block_num:Int
-    let previous:String
-    let producer:String
-    let producer_signature:String
-    let transactions:[Transaction]
-    var content_string:String?
-}
-
-
-struct Transaction:Decodable{
-    let status:String
-    var content_string:String?
-}
-
-
-
 
 /**Responsible for retrieving EOS blockchain related information */
 class BlockchainOperations{
@@ -51,15 +35,13 @@ class BlockchainOperations{
     private let client:HttpClient
     private var max:Int!
 
-    /**List of last n blocks*/
-    private var blocks = [Block]()
     
     private var isRunning:Bool = false
     /**Easy to switch block producer*/
     private var producer:Producer!
     
     //Completion blocks
-    typealias blocksCompleteClosure = ( _ blocks: [Block], _ error: Error?)->Void
+    typealias blocksCompleteClosure = ( _ blocks: Bool, _ error: Error?)->Void
     typealias blockCompleteClosure = ( _ blocks: Block?, _ error: Error?)->Void
     typealias chainCompleteClosure = ( _ chain: ChainInfo?, _ error: Error?)->Void
     
@@ -88,47 +70,47 @@ class BlockchainOperations{
         max = blocks_num
         
         isRunning = true
-        
-        //removing old blocks
-        self.blocks.removeAll()
-        
         getGeneralInfo { (info,error) in
             
             if let error = error
             {
                 print(error)
                 self.isRunning = false
-                completion(self.blocks,error)
+                completion(false,error)
                 return
             }
             if let info = info {
                 let head_id = String(info.lastBlock)
                 //Finally start downloading
-                self.download(blockid: head_id, { (_blocks, _error) in
+                self.download(blockid: head_id, count: self.max, { (_blocks, error) in
                     self.isRunning = false
-                    completion(_blocks,_error)
-                    
+                    completion(_blocks,error)
                 })
+
             }else{
                 self.isRunning = false
-                completion(self.blocks, EOSError.unknownError)
+                completion(false, EOSError.unknownError)
             }
         }
     }
     
     /**Responsible for downloading block with given block id*/
-    func download(blockid:String, _ completion:@escaping blocksCompleteClosure){
-        if blocks.count == max{
-            completion(self.blocks,nil)
+    func download(blockid:String, count:Int, _ completion:@escaping blocksCompleteClosure){
+        if count == max{
+            completion(true,nil)
             return
         }
         
         getBlockContents(block:blockid) { (info,error) in
-            if let info = info{
-                self.blocks.append(info)
-                self.download(blockid: info.previous, completion)
+            if error != nil{
+                completion(false,error)
+                return
+            }
+            
+            if let info = info, let previous = info.previous{
+               self.download(blockid: previous, count: count + 1, completion)
             }else{
-                completion(self.blocks,error)
+                completion(true,nil)
             }
         }
     }
@@ -175,12 +157,14 @@ class BlockchainOperations{
     /**Helper for decoding blocks */
     func decodeJSONBlockData(_ data: Data)->Block?{
        
+ 
         guard  var info = try? JSONDecoder().decode(Block.self, from: data) else{
+            
             return nil
         }
        
         //add raw information to the Block data
-        info.content_string = String(data: data, encoding: .utf8)
+//       info.content_string = String(data: data, encoding: .utf8)
         return info
     }
     
@@ -205,13 +189,13 @@ class BlockchainOperations{
                 return
             }
             
-            guard let info = self.decodeJSONBlockData(data) else {
-                completion(nil,EOSError.parsingJSON)
-                return
+            DispatchQueue.main.async {
+                guard let info = self.decodeJSONBlockData(data) else {
+                    completion(nil,EOSError.parsingJSON)
+                    return
+                }
+                completion(info,nil)
             }
-            
-            
-            completion(info,nil)
         }
     }
 }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 
 class BlockExplorerViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
@@ -52,17 +52,28 @@ class BlockExplorerViewController: UIViewController, UITableViewDelegate {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         //Avoiding Retain Cycle using weak self
         self.blockchainops.downloadBlocks(20) { [weak self] (blocks, error) in
-
-            //A lot of networking calls, switch it to the Main Thread
             DispatchQueue.main.async {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 if let error = error{
                     //present error to the user
                     self?.presentAlert(text: error.localizedDescription)
                 }
+                //Get Blocks
+                let request:NSFetchRequest<Block> = Block.fetchRequest()
+                let delegate = (UIApplication.shared.delegate as! AppDelegate)
+                let context = delegate.persistentContainer.viewContext
                 
-                self?.datasource.blocks = blocks
-                self?.tableView.reloadData()
+                
+                do{
+                    let _blocks = try context.fetch(request)
+                    for b in _blocks{
+                        print(b.block_num)
+                    }
+                    
+                }
+                catch let error{
+                    print(error)
+                }
             }
         }
     }

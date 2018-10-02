@@ -13,9 +13,12 @@
 		11DD0B7521364684005714BF /* chain_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 11DD0B7121364683005714BF /* chain_info.json */; };
 		11DD0B7621364B84005714BF /* Blockchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94FF213592D8002BECCF /* Blockchain.swift */; };
 		7735F14F2136E687004AF945 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC94CE21358FA7002BECCF /* DetailsViewController.swift */; };
-		7735F1512136F201004AF945 /* Unused.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735F1502136F201004AF945 /* Unused.swift */; };
 		7735F1552137311D004AF945 /* malformed_block.json in Resources */ = {isa = PBXBuildFile; fileRef = 7735F1542137311D004AF945 /* malformed_block.json */; };
 		7735F1562137311D004AF945 /* malformed_block.json in Resources */ = {isa = PBXBuildFile; fileRef = 7735F1542137311D004AF945 /* malformed_block.json */; };
+		7745EE312163C770009AEE21 /* Block+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7745EE2D2163C770009AEE21 /* Block+CoreDataClass.swift */; };
+		7745EE322163C770009AEE21 /* Block+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7745EE2E2163C770009AEE21 /* Block+CoreDataProperties.swift */; };
+		7745EE332163C770009AEE21 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7745EE2F2163C770009AEE21 /* Transaction+CoreDataClass.swift */; };
+		7745EE342163C770009AEE21 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7745EE302163C770009AEE21 /* Transaction+CoreDataProperties.swift */; };
 		7760A8D12137343D00509A53 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7760A8D02137343D00509A53 /* Networking.swift */; };
 		7760A8D22137343D00509A53 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7760A8D02137343D00509A53 /* Networking.swift */; };
 		7760A8D42137347D00509A53 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7760A8D32137347D00509A53 /* Constants.swift */; };
@@ -51,8 +54,11 @@
 /* Begin PBXFileReference section */
 		11DD0B7021364683005714BF /* block_info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = block_info.json; sourceTree = "<group>"; };
 		11DD0B7121364683005714BF /* chain_info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chain_info.json; sourceTree = "<group>"; };
-		7735F1502136F201004AF945 /* Unused.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unused.swift; sourceTree = "<group>"; };
 		7735F1542137311D004AF945 /* malformed_block.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = malformed_block.json; sourceTree = "<group>"; };
+		7745EE2D2163C770009AEE21 /* Block+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Block+CoreDataClass.swift"; path = "Model/Block+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7745EE2E2163C770009AEE21 /* Block+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Block+CoreDataProperties.swift"; path = "Model/Block+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7745EE2F2163C770009AEE21 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Transaction+CoreDataClass.swift"; path = "Model/Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7745EE302163C770009AEE21 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Transaction+CoreDataProperties.swift"; path = "Model/Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7760A8D02137343D00509A53 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		7760A8D32137347D00509A53 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		77AC94C921358FA7002BECCF /* EOSBlockExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EOSBlockExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +127,10 @@
 		77AC94C021358FA7002BECCF = {
 			isa = PBXGroup;
 			children = (
+				7745EE2D2163C770009AEE21 /* Block+CoreDataClass.swift */,
+				7745EE2E2163C770009AEE21 /* Block+CoreDataProperties.swift */,
+				7745EE2F2163C770009AEE21 /* Transaction+CoreDataClass.swift */,
+				7745EE302163C770009AEE21 /* Transaction+CoreDataProperties.swift */,
 				7760A8CF213733B400509A53 /* Model */,
 				11DD0B6F2136452B005714BF /* TestingData */,
 				77AC94CB21358FA7002BECCF /* EOSBlockExplorer */,
@@ -145,7 +155,6 @@
 			children = (
 				77AC94CC21358FA7002BECCF /* AppDelegate.swift */,
 				77AC94CE21358FA7002BECCF /* DetailsViewController.swift */,
-				7735F1502136F201004AF945 /* Unused.swift */,
 				77AC94D021358FA7002BECCF /* Main.storyboard */,
 				77AC94FD21359020002BECCF /* BlockExplorerViewController.swift */,
 				77AC94D621358FA9002BECCF /* Assets.xcassets */,
@@ -312,12 +321,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				77AC9500213592D8002BECCF /* Blockchain.swift in Sources */,
+				7745EE322163C770009AEE21 /* Block+CoreDataProperties.swift in Sources */,
+				7745EE332163C770009AEE21 /* Transaction+CoreDataClass.swift in Sources */,
 				77AC94FE21359020002BECCF /* BlockExplorerViewController.swift in Sources */,
+				7745EE312163C770009AEE21 /* Block+CoreDataClass.swift in Sources */,
 				77AC94D521358FA7002BECCF /* EOSBlockExplorer.xcdatamodeld in Sources */,
 				7760A8D12137343D00509A53 /* Networking.swift in Sources */,
 				77AC94CD21358FA7002BECCF /* AppDelegate.swift in Sources */,
+				7745EE342163C770009AEE21 /* Transaction+CoreDataProperties.swift in Sources */,
 				7735F14F2136E687004AF945 /* DetailsViewController.swift in Sources */,
-				7735F1512136F201004AF945 /* Unused.swift in Sources */,
 				7760A8D42137347D00509A53 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
